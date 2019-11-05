@@ -31,18 +31,19 @@
                 <legend><h1>What would you like to search for?</h1></legend>
                 <ul id="search-terms">
                     <li><label for="check-ingridients">Ingridients</label>
-                    <input type="radio" name="check-ingridients" id="check-ingridients" required> </li>
+                    <input type="radio" name="check-term" id="check-ingridients" required> </li>
                     <li><label for="check-cocktail-name">Cocktail Name</label>
-                    <input type="radio" name="check-cocktail-name" id="check-cocktail-name" required> </li>
+                    <input type="radio" name="check-term" id="check-cocktail-name" required> </li>
                     <li><label for="check-begining-letter">First letter of cocktail</label>
-                    <input type="radio" name="check-begining-letter" id="check-begining-letter" required> </li>
+                    <input type="radio" name="check-term" id="check-begining-letter" required> </li>
                     <li><label for="check-id">Drink or Ingridient ID</label>
-                    <input type="radio" name="check-id" id="check-id" required> </li>
+                    <input type="radio" name="check-term" id="check-id" required> </li>
                 </ul>
+                <button type="submit" id="term-submit">Submit</button>
             </fieldset>
         </form>
     </div>
-    <div>
+    <div class="hiddens">
         <form>
             <fieldset>
                 <legend><h3>Type your search term</h3></legend>
@@ -62,7 +63,7 @@
                     <label for="search-id">Type an ingridient or cocktail ID</label>
                     <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc">
                 </div>
-                <button type="submit" id="submit">Submit</button>
+                <button type="submit" id="submit" class="hiddens">Submit</button>
             </fieldset>
         </form>
     </div>
