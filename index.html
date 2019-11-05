@@ -24,7 +24,54 @@
 
   <!-- Add your site or application content here -->
   
-
+<main role="main">
+    <div>
+        <form>
+            <fieldset>
+                <legend><h1>What would you like to search for?</h1></legend>
+                <ul>
+                    <li><label for="check-ingridients">Ingridients</label>
+                    <input type="checkbox" name="check-ingridients" id="check-ingridients"> </li>
+                    <li><label for="check-cocktail-name">Cocktail Name</label>
+                    <input type="checkbox" name="check-cocktail-name" id="check-cocktail-name"> </li>
+                    <li><label for="check-begining-letter">First letter of cocktail</label>
+                    <input type="checkbox" name="check-begining-letter" id="check-begining-letter"> </li>
+                    <li><label for="check-id">Drink or Ingridient ID</label>
+                    <input type="checkbox" name="check-id" id="check-id"> </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <form>
+            <fieldset>
+                <legend><h3>Type your search term</h3></legend>
+                <div class="hiddens">
+                    <label for="search-ingridient">Type an ingridient</label>
+                    <input type="text" name="search-ingridient" id="search-ingridient" placeholder="Gin, Vodka, etc">
+                </div>
+                <div class="hiddens">
+                    <label for="search-cocktail-name">Type a cockatil name</label>
+                    <input type="text" name="search-cocktail-name" id="search-cocktail-name" placeholder="Shirley Temple, Bulldog, etc">
+                </div>
+                <div class="hiddens">
+                    <label for="search-begining-letter">Type a cocktail begining letter</label>
+                    <input type="text" name="search-begining-letter" id="search-begining-letter" placeholder="A, B, etc">
+                </div>
+                <div class="hiddens">
+                    <label for="search-id">Type an ingridient or cocktail ID</label>
+                    <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="hiddens" id="results">
+        <h3>Search Results</h3>
+        <ul id="results-list">
+            
+        </ul>
+    </div>
+</main>
 
 
 
