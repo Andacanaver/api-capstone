@@ -100,7 +100,12 @@ textarea {
  
 
 
-
+#search-terms {
+    list-style-type: none;
+}
+#search-terms li {
+    line-height: 1.5em;
+}
 
 
 
