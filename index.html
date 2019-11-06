@@ -31,20 +31,21 @@
                 <legend><h1>What would you like to search for?</h1></legend>
                 <ul id="search-terms">
                     <li><label for="check-ingredient">Ingredient</label>
-                    <input type="radio" name="check-term" value="opt1" required> </li>
+                    <input type="radio" name="check-term" value="opt1" required id="check-ingredient"> </li>
                     <li><label for="check-cocktail-name">Cocktail Name</label>
-                    <input type="radio" name="check-term" value="opt2" required> </li>
+                    <input type="radio" name="check-term" value="opt2" required id="check-cocktail-name"> </li>
                     <li><label for="check-begining-letter">First letter of cocktail</label>
-                    <input type="radio" name="check-term" value="opt3" required> </li>
+                    <input type="radio" name="check-term" value="opt3" required id="check-begining-letter"> </li>
                     <li><label for="check-id">Drink or ingredient ID</label>
-                    <input type="radio" name="check-term" value="opt4" required> </li>
+                    <input type="radio" name="check-term" value="opt4" required id="check-id"> </li>
                     <li><label for="check-random">Choose for a random cocktail</label>
-                    <input type="radio" name="check-term" id="opt5"></li>
+                    <input type="radio" name="check-term" value="opt5" id="check-random"></li>
                 </ul>
-                <button type="submit" id="random-submit" class="hidden">Submit for Random cocktail</button>
+                <button type="submit" id="random-submit" hidden="true">Submit for Random cocktail</button>
             </fieldset>
         </form>
     </div>
+    <p id="js-error-message" class="error-message"></p>
     <div hidden="true" id="terms-boxes">
         <form>
             <fieldset>
