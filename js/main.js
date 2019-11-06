@@ -71,7 +71,6 @@
          param = search + query;
      } else if (opt5.checked) {
          param = "random.php?";
-         $('#terms-boxes').show();
      }
 
      console.log(search);
@@ -93,7 +92,30 @@
          .then(responseJson => console.log(responseJson))
          .catch(err => {
              $('#js-error-message').text(`Something went wrong: ${err.message}`);
-         })
+         });
+ }
+
+ function displayResults(responseJson) {
+     $('#results-list').empty();
+     let opt1 = document.getElementById('check-ingredient');
+     let opt2 = document.getElementById('check-cocktail-name');
+     let opt3 = document.getElementById('check-begining-letter');
+     let opt4 = document.getElementById('check-id');
+     let opt5 = document.getElementById('check-random');
+
+     if (opt1.checked) {
+         for (let i = 0; i < responseJson.drinks.length; i++) {
+             let drink = responseJson.drinks[i];
+             $('#results-list').append(
+                 `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p>`)
+         }
+     } else if (opt2.checked) {
+         for (let i = 0; i < responseJson.drinks.length; i++) {
+             let drink = responseJson.drinks[i];
+             $('#results-list').append(
+                 `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p><p><ul id="ingredient">`)
+         }
+     }
  }
 
  function watchForm() {
