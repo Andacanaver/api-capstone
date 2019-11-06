@@ -107,9 +107,17 @@ textarea {
     line-height: 1.5em;
 }
 
+#results-list li img {
+    width: 25%;
+}
+.drink-mix ul {
+    list-style-type: none;
+}
 
-
-
+.drink-mix {
+    display: flex;
+    flex-flow: row;
+}
 
 
 
