@@ -89,7 +89,7 @@
              }
              throw new Error(response.statusText);
          })
-         .then(responseJson => console.log(responseJson))
+         .then(responseJson => displayResults(responseJson))
          .catch(err => {
              $('#js-error-message').text(`Something went wrong: ${err.message}`);
          });
@@ -102,19 +102,38 @@
      let opt3 = document.getElementById('check-begining-letter');
      let opt4 = document.getElementById('check-id');
      let opt5 = document.getElementById('check-random');
-
+     let iArr = [];
+     let mArr = [];
      if (opt1.checked) {
          for (let i = 0; i < responseJson.drinks.length; i++) {
              let drink = responseJson.drinks[i];
              $('#results-list').append(
                  `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p>`)
          }
-     } else if (opt2.checked) {
+         $('#results').removeClass('hidden');
+     } else if (opt2.checked || opt3.checked || opt4.checked || opt5.checked) {
          for (let i = 0; i < responseJson.drinks.length; i++) {
              let drink = responseJson.drinks[i];
              $('#results-list').append(
-                 `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p><p><ul id="ingredient">`)
+                 `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p><div class="drink-mix"><ul id="measurements-${i}"></ul><ul id="ingredients-${i}"></ul></div>`)
+             
+             for (let j = 1; j < 16; j++) {
+                 const ingredientName = 'strIngredient' + j;
+                 const measureName = 'strMeasure' + j;
+                 if (drink[ingredientName]) {
+                     $('#ingredients-' + [i]).append(`<li>${drink[ingredientName]}</li>`);
+                     console.log(drink[ingredientName]);
+                 } else {
+                     console.log('somethings wrong');
+                 }
+                 if (drink[measureName]) {
+                     $('#measurements-' + [i]).append(`<li>${drink[measureName]}</li>`);
+                 }
+                 
+             }
+             
          }
+        $('#results').removeClass('hidden');
      }
  }
 
