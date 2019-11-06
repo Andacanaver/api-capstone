@@ -115,7 +115,7 @@
          for (let i = 0; i < responseJson.drinks.length; i++) {
              let drink = responseJson.drinks[i];
              $('#results-list').append(
-                 `<li><h3>${drink.strDrink}</h3><div class="info"><p><span>Drink ID: </span>${drink.idDrink}</p><p><span>Category: </span>${drink.strCategory}</p><p><span>Non\/Alcoholic: </span>${drink.strAlcoholic}</p><p><span>Glass Type: </span>${drink.strGlass}</p></div><div class="image"><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p></div><div class="drink-mix"><ul id="measurements-${i}"></ul><ul id="ingredients-${i}"></ul></div><div><p><span>Instructions: </span>${drink.strInstructions}</p></div>`)
+                 `<li><div class="info"><p><span>Drink Name: </span>${drink.strDrink}</p><p><span>Drink ID: </span>${drink.idDrink}</p><p><span>Category: </span>${drink.strCategory}</p><p><span>Non\/Alcoholic: </span>${drink.strAlcoholic}</p><p><span>Glass Type: </span>${drink.strGlass}</p></div><div class="image"><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p></div><div class="drink-mix"><ul id="measurements-${i}"></ul><ul id="ingredients-${i}"></ul></div><div class="instructions"><p><span>Instructions: </span>${drink.strInstructions}</p></div>`)
              
              for (let j = 1; j < 16; j++) {
                  const ingredientName = 'strIngredient' + j;
