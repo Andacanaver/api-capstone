@@ -112,6 +112,8 @@ textarea {
 }
 .drink-mix ul {
     list-style-type: none;
+    padding-left: 0;
+    padding-right: 20px;
 }
 
 .drink-mix {
