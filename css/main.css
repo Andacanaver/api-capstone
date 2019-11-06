@@ -257,8 +257,55 @@ span {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/*=========================================================================
+*********************          TABLET            **************************
+==========================================================================*/
+
+@media only screen and (min-width: 768px) {
+
+    
+    #search-terms li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    .info {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+}
+
+
+/*==========================================================================
+**********************             DESKTOP           ***********************
+==========================================================================*/
+
+@media only screen and (min-width: 1200px) {
+ 
+    .drinkInstructions {
+        display: flex;
+        justify-content: center;;
+    }
+    .half-width {
+        width: 50%;
+    }
+    #terms-boxes button {
+        margin: 20px;
+        width: 25%;
+        font-size: 1.5em;
+    }
+    #opt1 label, #opt2 label, #opt3 label, #opt4 label {
+        padding-bottom: 20px;
+    }
+    #opt1 input, #opt2 input, #opt3 input, #opt4 input {
+        width: 25%;
+    }
+    #opt1 input:placeholder-shown,
+    #opt2 input:placeholder-shown,
+    #opt3 input:placeholder-shown,
+    #opt4 input:placeholder-shown {
+        text-align: center;
+    }
 }
 
 @media print,
