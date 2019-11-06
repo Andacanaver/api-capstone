@@ -30,44 +30,46 @@
             <fieldset>
                 <legend><h1>What would you like to search for?</h1></legend>
                 <ul id="search-terms">
-                    <li><label for="check-ingridients">Ingridients</label>
-                    <input type="radio" name="check-term" id="check-ingridients" required> </li>
+                    <li><label for="check-ingredient">Ingredient</label>
+                    <input type="radio" name="check-term" value="opt1" required> </li>
                     <li><label for="check-cocktail-name">Cocktail Name</label>
-                    <input type="radio" name="check-term" id="check-cocktail-name" required> </li>
+                    <input type="radio" name="check-term" value="opt2" required> </li>
                     <li><label for="check-begining-letter">First letter of cocktail</label>
-                    <input type="radio" name="check-term" id="check-begining-letter" required> </li>
-                    <li><label for="check-id">Drink or Ingridient ID</label>
-                    <input type="radio" name="check-term" id="check-id" required> </li>
+                    <input type="radio" name="check-term" value="opt3" required> </li>
+                    <li><label for="check-id">Drink or ingredient ID</label>
+                    <input type="radio" name="check-term" value="opt4" required> </li>
+                    <li><label for="check-random">Choose for a random cocktail</label>
+                    <input type="radio" name="check-term" id="opt5"></li>
                 </ul>
-                <button type="submit" id="term-submit">Submit</button>
+                <button type="submit" id="random-submit" class="hidden">Submit for Random cocktail</button>
             </fieldset>
         </form>
     </div>
-    <div class="hiddens">
+    <div hidden="true" id="terms-boxes">
         <form>
             <fieldset>
                 <legend><h3>Type your search term</h3></legend>
-                <div class="hiddens">
-                    <label for="search-ingridient">Type an ingridient</label>
-                    <input type="text" name="search-ingridient" id="search-ingridient" placeholder="Gin, Vodka, etc">
+                <div hidden="true" id="opt1">
+                    <label for="search-ingredient">Type an ingredient</label>
+                    <input type="text" name="search-ingredient" id="search-ingredient" placeholder="Gin, Vodka, etc">
                 </div>
-                <div class="hiddens">
+                <div hidden="true" id="opt2">
                     <label for="search-cocktail-name">Type a cockatil name</label>
                     <input type="text" name="search-cocktail-name" id="search-cocktail-name" placeholder="Shirley Temple, Bulldog, etc">
                 </div>
-                <div class="hiddens">
+                <div hidden="true" id="opt3">
                     <label for="search-begining-letter">Type a cocktail begining letter</label>
                     <input type="text" name="search-begining-letter" id="search-begining-letter" placeholder="A, B, etc">
                 </div>
-                <div class="hiddens">
-                    <label for="search-id">Type an ingridient or cocktail ID</label>
+                <div hidden="true" id="opt4">
+                    <label for="search-id">Type an ingredient or cocktail ID</label>
                     <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc">
                 </div>
-                <button type="submit" id="submit" class="hiddens">Submit</button>
+                <button type="submit" id="submit">Submit</button>
             </fieldset>
         </form>
     </div>
-    <div class="hiddens" id="results">
+    <div class="hidden" id="results">
         <h3>Search Results</h3>
         <ul id="results-list">
             
