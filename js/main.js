@@ -115,16 +115,13 @@
          for (let i = 0; i < responseJson.drinks.length; i++) {
              let drink = responseJson.drinks[i];
              $('#results-list').append(
-                 `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p><div class="drink-mix"><ul id="measurements-${i}"></ul><ul id="ingredients-${i}"></ul></div>`)
+                 `<li><h3>${drink.strDrink}</h3><div class="info"><p><span>Drink ID: </span>${drink.idDrink}</p><p><span>Category: </span>${drink.strCategory}</p><p><span>Non\/Alcoholic: </span>${drink.strAlcoholic}</p><p><span>Glass Type: </span>${drink.strGlass}</p></div><div class="image"><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p></div><div class="drink-mix"><ul id="measurements-${i}"></ul><ul id="ingredients-${i}"></ul></div><div><p><span>Instructions: </span>${drink.strInstructions}</p></div>`)
              
              for (let j = 1; j < 16; j++) {
                  const ingredientName = 'strIngredient' + j;
                  const measureName = 'strMeasure' + j;
                  if (drink[ingredientName]) {
                      $('#ingredients-' + [i]).append(`<li>${drink[ingredientName]}</li>`);
-                     console.log(drink[ingredientName]);
-                 } else {
-                     console.log('somethings wrong');
                  }
                  if (drink[measureName]) {
                      $('#measurements-' + [i]).append(`<li>${drink[measureName]}</li>`);
