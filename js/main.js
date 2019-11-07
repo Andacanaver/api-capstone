@@ -91,7 +91,9 @@
          })
          .then(responseJson => displayResults(responseJson))
          .catch(err => {
-             $('#js-error-message').text(`Something went wrong: ${err.message}`);
+             $('#js-error-message').text(`Something went wrong: 
+//change to more user friendly errors
+            ${err.message}`);
          });
  }
 
@@ -102,29 +104,29 @@
      let opt3 = document.getElementById('check-begining-letter');
      let opt4 = document.getElementById('check-id');
      let opt5 = document.getElementById('check-random');
-     let iArr = [];
-     let mArr = [];
+     //maxResult is 15 because that is how many ingredients and measures the Json comes back with
+     const maxResult = 15;
+     let drink = responseJson.drinks;
+     
      if (opt1.checked) {
-         for (let i = 0; i < responseJson.drinks.length; i++) {
-             let drink = responseJson.drinks[i];
+         for (let i = 0; i < drink.length; i++) {
              $('#results-list').append(
-                 `<li><h3>${drink.strDrink}</h3><p><span>Drink ID: </span>${drink.idDrink}</p><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p>`)
+                 `<li><h3>${drink[i].strDrink}</h3><p><span>Drink ID: </span>${drink[i].idDrink}</p><p><img src="${drink[i].strDrinkThumb}" alt="${drink[i].strDrink}"></p>`)
          }
          $('#results').removeClass('hidden');
      } else if (opt2.checked || opt3.checked || opt4.checked || opt5.checked) {
-         for (let i = 0; i < responseJson.drinks.length; i++) {
-             let drink = responseJson.drinks[i];
+         for (let i = 0; i < drink.length; i++) {
              $('#results-list').append(
-                 `<li><div class="info"><p><span>Drink Name: </span>${drink.strDrink}</p><p><span>Drink ID: </span>${drink.idDrink}</p><p><span>Category: </span>${drink.strCategory}</p><p><span>Non\/Alcoholic: </span>${drink.strAlcoholic}</p><p><span>Glass Type: </span>${drink.strGlass}</p></div><div class="drinkInstructions"><div class="image half-width"><p><img src="${drink.strDrinkThumb}" alt="${drink.strDrink}"></p></div><div class="drink-mix half-width"><ul id="measurements-${i}"><h4>Measurements</h4></ul><ul id="ingredients-${i}"><h4>Ingredients</h4></ul></div></div><div class="instructions"><p><span>Instructions: </span>${drink.strInstructions}</p></div>`)
-             
-             for (let j = 1; j < 16; j++) {
+                 `<li><div class="drink-list"><div class="info"><p><span>Drink Name: </span>${drink[i].strDrink}</p><p><span>Drink ID: </span>${drink[i].idDrink}</p><p><span>Category: </span>${drink[i].strCategory}</p><p><span>Non\/Alcoholic: </span>${drink[i].strAlcoholic}</p><p><span>Glass Type: </span>${drink[i].strGlass}</p></div><div class="drinkInstructions"><div class="image half-width"><p><img src="${drink[i].strDrinkThumb}" alt="The Cocktail is  ${drink[i].strDrink}"></p></div><div class="drink-mix half-width"><ul id="measurements-${i}"><h4>Measurements</h4></ul><ul id="ingredients-${i}"><h4>Ingredients</h4></ul></div></div><div class="instructions"><p><span>Instructions: </span>${drink[i].strInstructions}</p></div></div></li>`)
+             for (let j = 1; j <= maxResult; j++) {
+                 
                  const ingredientName = 'strIngredient' + j;
                  const measureName = 'strMeasure' + j;
-                 if (drink[ingredientName]) {
-                     $('#ingredients-' + [i]).append(`<li>${drink[ingredientName]}</li>`);
+                 if (drink[i][ingredientName]) {
+                     $('#ingredients-' + [i]).append(`<li>${drink[i][ingredientName]}</li>`);
                  }
-                 if (drink[measureName]) {
-                     $('#measurements-' + [i]).append(`<li>${drink[measureName]}</li>`);
+                 if (drink[i][measureName]) {
+                     $('#measurements-' + [i]).append(`<li>${drink[i][measureName]}</li>`);
                  }
                  
              }
