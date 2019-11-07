@@ -275,9 +275,11 @@ span {
     .info {
         display: flex;
         justify-content: space-around;
+        font-size: 1.15em
     }
-    .half-width {
-        width: 50%;
+    .half-width,
+    .instructions{
+        width: 30%;
     }
     #terms-boxes button {
         margin: 20px;
@@ -297,6 +299,8 @@ span {
     .drinkInstructions {
         flex-flow: row wrap;
         display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.25em;
     }
 }
 
@@ -309,10 +313,12 @@ span {
  
     .drinkInstructions {
         display: flex;
-        justify-content: center;;
+        justify-content: space-around;
+        margin-bottom: 1.25em;
     }
-    .half-width {
-        width: 50%;
+    .half-width,
+    .instructions {
+        width: 30%;
     }
     #terms-boxes button {
         margin: 20px;
