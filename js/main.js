@@ -91,9 +91,9 @@
          })
          .then(responseJson => displayResults(responseJson))
          .catch(err => {
-             $('#js-error-message').text(`Something went wrong: 
-//change to more user friendly errors
-            ${err.message}`);
+         //change to more user friendly errors
+         
+             $('#js-error-message').text(`Something went wrong please try again.`);
          });
  }
 
@@ -140,6 +140,7 @@
      radioSelect();
      $('form').submit(event => {
          event.preventDefault();
+         $('#js-error-message').text("");
          const search = formatDrinkSearch();
          getDrinks(search);
      });
