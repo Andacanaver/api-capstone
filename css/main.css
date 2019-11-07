@@ -116,9 +116,9 @@ main {
 legend {
     margin: 0 auto;
 }
-#opt1, #opt2, #opt3, #opt4 {
+#ingredientInput, #cocktailNameInput, #beginingLetterInput, #idInput {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }
@@ -291,14 +291,14 @@ legend {
         width: 25%;
         font-size: 1.5em;
     }
-    #opt1 label, #opt2 label, #opt3 label, #opt4 label {
+    #ingredientInput label, #cocktailNameInput label, #beginingLetterInput label, #idInput label {
         padding-bottom: 20px;
     }
     
-    #opt1 input:placeholder-shown,
-    #opt2 input:placeholder-shown,
-    #opt3 input:placeholder-shown,
-    #opt4 input:placeholder-shown {
+    #ingredientInput input:placeholder-shown,
+    #cocktailNameInput input:placeholder-shown,
+    #beginingLetterInput input:placeholder-shown,
+    #idInput input:placeholder-shown {
         text-align: center;
     }
     .drinkInstructions {
@@ -330,16 +330,16 @@ legend {
         width: 25%;
         font-size: 1.5em;
     }
-    #opt1 label, #opt2 label, #opt3 label, #opt4 label {
+    #ingredientInput label, #cocktailNameInput label, #beginingLetterInput label, #idInput label {
         padding-bottom: 20px;
     }
-    #opt1 input, #opt2 input, #opt3 input, #opt4 input {
+    #ingredientInput input, #cocktailNameInput input, #beginingLetterInput input, #idInput input {
         width: 25%;
     }
-    #opt1 input:placeholder-shown,
-    #opt2 input:placeholder-shown,
-    #opt3 input:placeholder-shown,
-    #opt4 input:placeholder-shown {
+    #ingredientInput input:placeholder-shown,
+    #cocktailNameInput input:placeholder-shown,
+    #beginingLetterInput input:placeholder-shown,
+    #idInput input:placeholder-shown {
         text-align: center;
     }
 }
