@@ -113,6 +113,9 @@ main {
 .whatToSearch {
     text-align: center;
 }
+legend {
+    margin: 0 auto;
+}
 #opt1, #opt2, #opt3, #opt4 {
     display: flex;
     flex-flow: column wrap;
@@ -157,7 +160,9 @@ span {
     font-weight: 700;
 }
 
-
+legend {
+    text-align: center;
+}
 
 
 
