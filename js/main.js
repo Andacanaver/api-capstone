@@ -48,7 +48,7 @@
      let cocktailNameInput = document.getElementById('check-cocktail-name');
      let beginingLetterInput = document.getElementById('check-begining-letter');
      let idInput = document.getElementById('check-id');
-     let opt5 = document.getElementById('check-random');
+     let checkRandom = document.getElementById('check-random');
      let search;
      let query;
      let param;
@@ -68,7 +68,7 @@
          search = "lookup.php?i=";
          query = $('#search-id').val();
          param = search + query;
-     } else if (opt5.checked) {
+     } else if (checkRandom.checked) {
          param = "random.php?";
      }
 
@@ -102,7 +102,7 @@
      let cocktailNameInput = document.getElementById('check-cocktail-name');
      let beginingLetterInput = document.getElementById('check-begining-letter');
      let idInput = document.getElementById('check-id');
-     let opt5 = document.getElementById('check-random');
+     let checkRandom = document.getElementById('check-random');
      //maxResult is 15 because that is how many ingredients and measures the Json comes back with
      const maxResult = 15;
      let drink = responseJson.drinks;
@@ -113,7 +113,7 @@
                  `<li><h3>${drink[i].strDrink}</h3><p><span>Drink ID: </span>${drink[i].idDrink}</p><p><img src="${drink[i].strDrinkThumb}" alt="${drink[i].strDrink}"></p>`)
          }
          $('#results').removeClass('hidden');
-     } else if (cocktailNameInput.checked || beginingLetterInput.checked || idInput.checked || opt5.checked) {
+     } else if (cocktailNameInput.checked || beginingLetterInput.checked || idInput.checked || checkRandom.checked) {
          for (let i = 0; i < drink.length; i++) {
              $('#results-list').append(
                  `<li><div class="drink-list"><div class="info"><p><span>Drink Name: </span>${drink[i].strDrink}</p><p><span>Drink ID: </span>${drink[i].idDrink}</p><p><span>Category: </span>${drink[i].strCategory}</p><p><span>Non\/Alcoholic: </span>${drink[i].strAlcoholic}</p><p><span>Glass Type: </span>${drink[i].strGlass}</p></div><div class="drinkInstructions"><div class="image half-width"><p><img src="${drink[i].strDrinkThumb}" alt="The Cocktail is  ${drink[i].strDrink}"></p></div><div class="drink-mix half-width"><ul id="measurements-${i}"><h4>Measurements</h4></ul><ul id="ingredients-${i}"><h4>Ingredients</h4></ul></div><div class="instructions"><p><span>Instructions: </span>${drink[i].strInstructions}</p></div></div></div></li>`)
