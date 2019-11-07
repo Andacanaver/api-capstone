@@ -108,6 +108,7 @@ main {
 }
 #search-terms li {
     line-height: 1.5em;
+    
 }
 .whatToSearch {
     text-align: center;
@@ -134,6 +135,9 @@ button[type="submit"]:hover {
 }
 #results-list {
     padding-left: 0;
+}
+.drink-list {
+    border-top: 2px solid; 
 }
 .drink-mix ul {
     list-style-type: none;
@@ -272,7 +276,28 @@ span {
         display: flex;
         justify-content: space-around;
     }
+    .half-width {
+        width: 50%;
+    }
+    #terms-boxes button {
+        margin: 20px;
+        width: 25%;
+        font-size: 1.5em;
+    }
+    #opt1 label, #opt2 label, #opt3 label, #opt4 label {
+        padding-bottom: 20px;
+    }
     
+    #opt1 input:placeholder-shown,
+    #opt2 input:placeholder-shown,
+    #opt3 input:placeholder-shown,
+    #opt4 input:placeholder-shown {
+        text-align: center;
+    }
+    .drinkInstructions {
+        flex-flow: row wrap;
+        display: flex;
+    }
 }
 
 
