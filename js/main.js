@@ -116,7 +116,25 @@
      } else if (cocktailNameInput.checked || beginingLetterInput.checked || idInput.checked || checkRandom.checked) {
          for (let i = 0; i < drink.length; i++) {
              $('#results-list').append(
-                 `<li><div class="drink-list"><div class="info"><p><span>Drink Name: </span>${drink[i].strDrink}</p><p><span>Drink ID: </span>${drink[i].idDrink}</p><p><span>Category: </span>${drink[i].strCategory}</p><p><span>Non\/Alcoholic: </span>${drink[i].strAlcoholic}</p><p><span>Glass Type: </span>${drink[i].strGlass}</p></div><div class="drinkInstructions"><div class="image half-width"><p><img src="${drink[i].strDrinkThumb}" alt="The Cocktail is  ${drink[i].strDrink}"></p></div><div class="drink-mix half-width"><ul id="measurements-${i}"><h4>Measurements</h4></ul><ul id="ingredients-${i}"><h4>Ingredients</h4></ul></div><div class="instructions"><p><span>Instructions: </span>${drink[i].strInstructions}</p></div></div></div></li>`)
+                 `<li>
+                    <div class="drink-list">
+                        <div class="info">
+                            <p><span>Drink Name: </span>${drink[i].strDrink}</p>
+                            <p><span>Drink ID: </span>${drink[i].idDrink}</p>
+                            <p><span>Category: </span>${drink[i].strCategory}</p>
+                            <p><span>Non\/Alcoholic: </span>${drink[i].strAlcoholic}</p>
+                            <p><span>Glass Type: </span>${drink[i].strGlass}</p>
+                        </div>
+                        <div class="drinkInstructions">
+                            <p class="image half-width"><img src="${drink[i].strDrinkThumb}" alt="The Cocktail is  ${drink[i].strDrink}"></p>
+                            <div class="drink-mix half-width">
+                                <ul id="measurements-${i}"><h4>Measurements</h4></ul>
+                                <ul id="ingredients-${i}"><h4>Ingredients</h4></ul>
+                            </div>
+                            <p class="instructions"><span>Instructions: </span>${drink[i].strInstructions}</p>
+                        </div>
+                    </div>
+                </li>`)
              for (let j = 1; j <= maxResult; j++) {
                  
                  const ingredientName = 'strIngredient' + j;
