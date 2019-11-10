@@ -101,6 +101,7 @@ textarea {
 body {
     color: #8ccbff;
     background-color: #d57875;
+    font-family: 'Roboto', 'Lato', 'Montserrat', sans-serif;
 }
 main {
     text-align: center;

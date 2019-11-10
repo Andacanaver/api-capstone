@@ -2,82 +2,87 @@
 <html class="no-js" lang="en">
  
 <head>
-  <meta charset="utf-8">
-  <title>Cockatil Drink Search</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Cockatil Drink Search</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <meta name="theme-color" content="#fafafa">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-  <!--[if IE]>
+    <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  
-<main role="main">
-    <div class="hero">
-       <h1>Cocktail Search</h1>
-        <form class="whatToSearch">
-            <fieldset>
-                <legend><h2>What would you like to search for?</h2></legend>
-                <ul id="search-terms">
-                    <li><label for="check-ingredient">Ingredient</label>
-                    <input type="radio" name="check-term" value="opt1" required id="check-ingredient"> </li>
-                    <li><label for="check-cocktail-name">Cocktail Name</label>
-                    <input type="radio" name="check-term" value="opt2" required id="check-cocktail-name"> </li>
-                    <li><label for="check-begining-letter">First letter of cocktail</label>
-                    <input type="radio" name="check-term" value="opt3" required id="check-begining-letter"> </li>
-                    <li><label for="check-id">Cocktail ID</label>
-                    <input type="radio" name="check-term" value="opt4" required id="check-id"> </li>
-                    <li><label for="check-random">Choose for a random cocktail</label>
-                    <input type="radio" name="check-term" value="opt5" id="check-random"></li>
-                </ul>
-                <button type="submit" id="random-submit" hidden="true">Submit for Random Cocktail</button>
-            </fieldset>
-        </form>
-    </div>
-    <p id="js-error-message" class="error-message"></p>
-    <div hidden="true" id="terms-boxes">
-        <form>
-            <fieldset>
-                <legend><h3>Type your search term</h3></legend>
-                <p hidden="true" id="ingredientInput">
-                    <label for="search-ingredient">Type an ingredient</label>
-                    <input type="text" name="search-ingredient" id="search-ingredient" placeholder="Gin, Vodka, etc (will only accept one)">
-                </p>
-                <p hidden="true" id="cocktailNameInput">
-                    <label for="search-cocktail-name">Type a cockatil name</label>
-                    <input type="text" name="search-cocktail-name" id="search-cocktail-name" placeholder="Margarita, Mimosa, etc">
-                </p>
-                <p hidden="true" id="beginingLetterInput">
-                    <label for="search-begining-letter">Type a cocktail begining letter</label>
-                    <input type="text" name="search-begining-letter" id="search-begining-letter" placeholder="A, B, etc (will only accept letters)">
-                </p>
-                <p hidden="true" id="idInput">
-                    <label for="search-id">Type a cocktail ID</label>
-                    <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc (enter numbers only)">
-                </p>
-                <button type="submit" id="submit">Submit</button>
-            </fieldset>
-        </form>
-    </div>
-    <div class="hidden" id="results">
-        <h3>Search Results</h3>
-        <ul id="results-list">
-            
-        </ul>
-    </div>
-</main>
+    <!-- Add your site or application content here -->
+
+    <main role="main">
+        <div class="hero">
+            <h1>Cocktail Search</h1>
+            <form class="whatToSearch">
+                <fieldset>
+                    <legend>
+                        <h2>What would you like to search for?</h2>
+                    </legend>
+                    <ul id="search-terms">
+                        <li><label for="check-ingredient">Ingredient</label>
+                            <input type="radio" name="check-term" value="opt1" required id="check-ingredient"> </li>
+                        <li><label for="check-cocktail-name">Cocktail Name</label>
+                            <input type="radio" name="check-term" value="opt2" required id="check-cocktail-name"> </li>
+                        <li><label for="check-begining-letter">First letter of cocktail</label>
+                            <input type="radio" name="check-term" value="opt3" required id="check-begining-letter"> </li>
+                        <li><label for="check-id">Cocktail ID</label>
+                            <input type="radio" name="check-term" value="opt4" required id="check-id"> </li>
+                        <li><label for="check-random">Choose for a random cocktail</label>
+                            <input type="radio" name="check-term" value="opt5" id="check-random"></li>
+                    </ul>
+                    <button type="submit" id="random-submit" hidden="true">Submit for Random Cocktail</button>
+                </fieldset>
+            </form>
+        </div>
+        <p id="js-error-message" class="error-message"></p>
+        <div hidden="true" id="terms-boxes">
+            <form>
+                <fieldset>
+                    <legend>
+                        <h3>Type your search term</h3>
+                    </legend>
+                    <p hidden="true" id="ingredientInput">
+                        <label for="search-ingredient">Type an ingredient</label>
+                        <input type="text" name="search-ingredient" id="search-ingredient" placeholder="Gin, Vodka, etc (will only accept one)">
+                    </p>
+                    <p hidden="true" id="cocktailNameInput">
+                        <label for="search-cocktail-name">Type a cockatil name</label>
+                        <input type="text" name="search-cocktail-name" id="search-cocktail-name" placeholder="Margarita, Mimosa, etc">
+                    </p>
+                    <p hidden="true" id="beginingLetterInput">
+                        <label for="search-begining-letter">Type a cocktail begining letter</label>
+                        <input type="text" name="search-begining-letter" id="search-begining-letter" placeholder="A, B, etc (will only accept letters)">
+                    </p>
+                    <p hidden="true" id="idInput">
+                        <label for="search-id">Type a cocktail ID</label>
+                        <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc (enter numbers only)">
+                    </p>
+                    <button type="submit" id="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="hidden" id="results">
+            <h3>Search Results</h3>
+            <ul id="results-list">
+
+            </ul>
+        </div>
+    </main>
 
 
 
@@ -88,29 +93,26 @@
 
 
 
+    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+    </script>
 
 
-
-
-
-
-
-
-  
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
-</html>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('set', 'transport', 'beacon');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body></html>
  
