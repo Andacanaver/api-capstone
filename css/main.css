@@ -98,11 +98,19 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
+body {
+    color: #8ccbff;
+    background-color: #d57875;
+}
 main {
     text-align: center;
 }
-
+.hero {
+    background: url('/img/cocktails.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
 #search-terms {
     list-style-type: none;
     padding-left: 0;
@@ -153,6 +161,8 @@ input[type="text"] {
 button[type="submit"] {
     border: 2px solid #333;
     border-radius: 5px;
+    background-color: #cca05c;
+    color: #2d5a80;
 }
 
 button[type="submit"]:hover {
@@ -190,7 +200,9 @@ button[type="submit"]:hover {
     align-items: flex-start;
     //margin: 15px auto
 }
-
+.drinkInstructions {
+        margin-bottom: 1.25em;
+    }
 .instructions {
     margin: 0 1em;
     padding-top: 20px;
@@ -361,7 +373,6 @@ legend {
         flex-flow: row wrap;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1.25em;
     }
 }
 
@@ -375,7 +386,6 @@ legend {
     .drinkInstructions {
         display: flex;
         justify-content: space-around;
-        margin-bottom: 1.25em;
     }
 
     .half-width,
