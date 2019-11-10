@@ -1,5 +1,6 @@
 # Cocktail Search - api-capstone
-https://andacanaver.github.io/api-capstone/
+
+<a href='https://andacanaver.github.io/api-capstone/'> Live Demo</a>
 
 The user can search by four different categories and also have the fetch generate a random result
 The results will display information about the drink along with a picture, the ingredients and measurements and
