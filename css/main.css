@@ -100,17 +100,32 @@ textarea {
 
 body {
     color: #8ccbff;
-    background-color: #d57875;
+    background-color: #000;
     font-family: 'Roboto', 'Lato', 'Montserrat', sans-serif;
+}
+#background {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+#background::after {
+    content: "";
+    background: url("/img/cocktails.jpg");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 main {
     text-align: center;
 }
-.hero {
-    background: url('/img/cocktails.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+
+.hero h1 {
+    margin-top: 0;
+    padding-top: .5em;
 }
 #search-terms {
     list-style-type: none;
@@ -119,7 +134,6 @@ main {
 
 #search-terms li {
     line-height: 1.5em;
-
 }
 
 .whatToSearch {
