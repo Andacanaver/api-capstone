@@ -103,11 +103,13 @@ body {
     background-color: #000;
     font-family: 'Roboto', 'Lato', 'Montserrat', sans-serif;
 }
+
 #background {
     width: 100%;
     display: block;
     position: relative;
 }
+
 #background::after {
     content: "";
     background: url("/img/cocktails.jpg");
@@ -119,6 +121,7 @@ body {
     position: absolute;
     z-index: -1;
 }
+
 main {
     text-align: center;
 }
@@ -127,6 +130,7 @@ main {
     margin-top: 0;
     padding-top: .5em;
 }
+
 #search-terms {
     list-style-type: none;
     padding-left: 0;
@@ -161,12 +165,13 @@ legend {
 #idInput input:placeholder-shown {
     text-align: center;
 }
+
 #ingredientInput label,
-    #cocktailNameInput label,
-    #beginingLetterInput label,
-    #idInput label {
-        padding-bottom: 20px;
-    }
+#cocktailNameInput label,
+#beginingLetterInput label,
+#idInput label {
+    padding-bottom: 20px;
+}
 
 input[type="text"] {
     width: 45%;
@@ -176,19 +181,23 @@ input[type="text"] {
 button[type="submit"] {
     border: 2px solid #333;
     border-radius: 5px;
-    background-color: #cca05c;
-    color: #2d5a80;
+    background-color: #000;
+    color: #8ccbff;
 }
 
 button[type="submit"]:hover {
     cursor: pointer;
 }
-#terms-boxes button {
-        width: 45%;
-        font-size: 1.5em;
-    }
 
+#terms-boxes button,
+#random-submit {
+    width: 45%;
+    font-size: 1.5em;
+}
 
+#random-submit {
+    margin-bottom: 20px;
+}
 
 #results-list li img {
     width: 75%;
@@ -215,9 +224,11 @@ button[type="submit"]:hover {
     align-items: flex-start;
     //margin: 15px auto
 }
+
 .drinkInstructions {
-        margin-bottom: 1.25em;
-    }
+    margin-bottom: 1.25em;
+}
+
 .instructions {
     margin: 0 1em;
     padding-top: 20px;
@@ -357,8 +368,8 @@ legend {
     }
 
     #ingredientInput,
-#cocktailNameInput,
-#beginingLetterInput,
+    #cocktailNameInput,
+    #beginingLetterInput,
     #idInput {
         flex-flow: column;
         justify-content: center;
@@ -371,19 +382,19 @@ legend {
     }
 
     #ingredientInput input[type="text"],
-#cocktailNameInput input[type="text"],
-#beginingLetterInput input[type="text"],
+    #cocktailNameInput input[type="text"],
+    #beginingLetterInput input[type="text"],
     #idInput input[type="text"] {
         width: 75%;
     }
 
     #ingredientInput label,
-#cocktailNameInput label,
-#beginingLetterInput label,
+    #cocktailNameInput label,
+    #beginingLetterInput label,
     #idInput label {
         padding-bottom: 0;
     }
-    
+
     .drinkInstructions {
         flex-flow: row wrap;
         display: flex;
@@ -413,16 +424,18 @@ legend {
         width: 25%;
         font-size: 1.5em;
     }
+
     #ingredientInput label,
-#cocktailNameInput label,
-#beginingLetterInput label,
+    #cocktailNameInput label,
+    #beginingLetterInput label,
     #idInput label,
     #ingredientInput input[type="text"],
-#cocktailNameInput input[type="text"],
-#beginingLetterInput input[type="text"],
+    #cocktailNameInput input[type="text"],
+    #beginingLetterInput input[type="text"],
     #idInput input[type="text"] {
         width: 50%
     }
+
     #ingredientInput input,
     #cocktailNameInput input,
     #beginingLetterInput input,
