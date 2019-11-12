@@ -8,3 +8,5 @@ instructions on how to mix the drink.
 
 this is an asynchronous javascript app built using the "thecocktaildb" API
 other technologies include HTML/CSS/jQuery
+
+<img src="![Uploading Screen Shot 2019-11-12 at 9.50.52 AM.png…]()">
