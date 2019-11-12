@@ -9,7 +9,7 @@ measurements and a picture of the cocktail.</p>
 
 <h3>Demo</h3>
 
-<a href='https://andacanaver.github.io/api-capstone/'> Live Demo</a>
+<a href='https://andacanaver.github.io/api-capstone/' target="_blank"> Live Demo</a>
 
 <h3>Technologies Used</h3>
 <ul>
