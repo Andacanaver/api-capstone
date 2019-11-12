@@ -21,4 +21,4 @@ measurements and a picture of the cocktail.</p>
 </ul>
 
 <h3>Screenshot</h3>
-<img width="1440" alt="Screen Shot 2019-11-12 at 9 50 52 AM" src="https://user-images.githubusercontent.com/48130732/68689461-00527c00-0536-11ea-8620-bf3129cf4272.png">
+<img width="1440" alt="Screen Shot 2019-11-12 at 9 50 52 AM" src="https://user-images.githubusercontent.com/48130732/68689658-545d6080-0536-11ea-984a-40ac04d0fc05.png">
