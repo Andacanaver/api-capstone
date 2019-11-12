@@ -72,9 +72,7 @@
          param = "random.php?";
      }
 
-     console.log(search);
-     console.log(query);
-     console.log(param);
+     
      return param;
  }
 
