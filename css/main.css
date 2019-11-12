@@ -112,7 +112,7 @@ body {
 
 #background::after {
     content: "";
-    background: url("/img/cocktails.jpg");
+    background: url("../img/cocktails.jpg");
     opacity: 0.5;
     top: 0;
     left: 0;
