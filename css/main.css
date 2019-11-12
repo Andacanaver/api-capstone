@@ -147,7 +147,9 @@ main {
 legend {
     margin: 0 auto;
 }
-
+.error-message {
+    color: orange;
+}
 #ingredientInput,
 #cocktailNameInput,
 #beginingLetterInput,
