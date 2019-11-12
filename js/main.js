@@ -2,6 +2,7 @@
 
  const searchURL = 'https://www.thecocktaildb.com/api/json/v1/1/';
 
+//function for showing the correct input boxes depending on which radio button is selected
  function radioSelect() {
      $('input[name="check-term"]').on('click', function () {
          if ($(this).val() == 'opt1') {
@@ -43,6 +44,8 @@
      })
  }
 
+
+//Function for formating the api url depending on what radio button is selected
  function formatDrinkSearch() {
      let ingredientInput = document.getElementById('check-ingredient');
      let cocktailNameInput = document.getElementById('check-cocktail-name');
@@ -76,6 +79,7 @@
      return param;
  }
 
+//function for puttong the url together and sending the fetch request
  function getDrinks(query) {
      const url = searchURL + query;
 
@@ -94,6 +98,7 @@
          });
  }
 
+//function for displaying the results, depending on which radio button was selected
  function displayResults(responseJson) {
      $('#results-list').empty();
      let ingredientInput = document.getElementById('check-ingredient');
@@ -106,6 +111,7 @@
      let drink = responseJson.drinks;
      
      if (ingredientInput.checked) {
+         //this is for the ingredient selection which has different information than the others
          for (let i = 0; i < drink.length; i++) {
              $('#results-list').append(
                  `<li><h3>${drink[i].strDrink}</h3><p><span>Drink ID: </span>${drink[i].idDrink}</p><p><img src="${drink[i].strDrinkThumb}" alt="${drink[i].strDrink}"></p>`)
@@ -134,7 +140,7 @@
                     </div>
                 </li>`)
              for (let j = 1; j <= maxResult; j++) {
-                 
+                 //loops through and creates the list for the ingredients and measurements in the Json data. There are 15 for each.
                  const ingredientName = 'strIngredient' + j;
                  const measureName = 'strMeasure' + j;
                  if (drink[i][ingredientName]) {
