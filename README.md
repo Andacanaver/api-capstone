@@ -2,7 +2,7 @@
 
 <h2>Features</h2>
 
-<p>The user can search four different categories including ingredient and name. 
+<p>The user can search four different categories including cocktail ingredient and cocktail name. 
 They can also generate a random cocktail.
 The results will display information about the drink including how to mix it, ingredients needed and their
 measurements and a picture of the cocktail.</p>
