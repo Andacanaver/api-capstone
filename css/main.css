@@ -431,6 +431,12 @@ legend {
 
 }
 
+@media only screen and (min-width: 2000px) {
+    body {
+        font-size: 2em;
+    }
+}
+
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
 (min-resolution: 1.25dppx),
