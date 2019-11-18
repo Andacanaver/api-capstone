@@ -6,40 +6,41 @@
  function radioSelect() {
      $('input[name="check-term"]').on('click', function () {
          if ($(this).val() == 'opt1') {
-             $('#terms-boxes').show();
-             $('#ingredientInput').show();
-             $('#cocktailNameInput').hide();
-             $('#beginingLetterInput').hide();
-             $('#idInput').hide();
-             $('#random-submit').hide();
+             $('#terms-boxes').removeClass('hidden');
+             $('#ingredientInput').removeClass('hidden');
+             $('#cocktailNameInput').addClass('hidden');
+             $('#beginingLetterInput').addClass('hidden');
+             $('#idInput').addClass('hidden');
+             $('#random-submit').addClass('hidden');
          } else if ($(this).val() == 'opt2') {
-             $('#terms-boxes').show();
-             $('#cocktailNameInput').show();
-             $('#ingredientInput').hide();
-             $('#beginingLetterInput').hide();
-             $('#idInput').hide();
-             $('#random-submit').hide();
+             $('#terms-boxes').removeClass('hidden');
+             $('#ingredientInput').addClass('hidden');
+             $('#cocktailNameInput').removeClass('hidden');
+             $('#beginingLetterInput').addClass('hidden');
+             $('#idInput').addClass('hidden');
+             $('#random-submit').addClass('hidden');
          } else if ($(this).val() == 'opt3') {
-             $('#terms-boxes').show();
-             $('#beginingLetterInput').show();
-             $('#ingredientInput').hide();
-             $('#cocktailNameInput').hide();
-             $('#idInput').hide();
-             $('#random-submit').hide();
+             $('#terms-boxes').removeClass('hidden');
+             $('#ingredientInput').addClass('hidden');
+             $('#cocktailNameInput').addClass('hidden');
+             $('#beginingLetterInput').removeClass('hidden');
+             $('#idInput').addClass('hidden');
+             $('#random-submit').addClass('hidden');
          } else if ($(this).val() == 'opt4') {
-             $('#terms-boxes').show();
-             $('#idInput').show();
-             $('#ingredientInput').hide();
-             $('#cocktailNameInput').hide();
-             $('#beginingLetterInput').hide();
-             $('#random-submit').hide();
+             $('#terms-boxes').removeClass('hidden');
+             $('#ingredientInput').addClass('hidden');
+             $('#cocktailNameInput').addClass('hidden');
+             $('#beginingLetterInput').addClass('hidden');
+             $('#idInput').removeClass('hidden');
+             $('#random-submit').addClass('hidden');
          } else if ($(this).val() == 'opt5') {
-             $('#terms-boxes').hide();
-             $('#ingredientInput').hide();
-             $('#cocktailNameInput').hide();
-             $('#beginingLetterInput').hide();
-             $('#idInput').hide();
-             $('#random-submit').show();
+             $('#terms-boxes').addClass('hidden');
+             $('#ingredientInput').addClass('hidden');
+             $('#cocktailNameInput').addClass('hidden');
+             $('#beginingLetterInput').addClass('hidden');
+             $('#idInput').addClass('hidden');
+             $('#random-submit').removeClass('hidden');
+             
          }
      })
  }
