@@ -25,7 +25,7 @@
 
     <!-- Add your site or application content here -->
     <div id="background">
-    <main role="main">
+    <main>
         <div class="hero">
             <h1>Cocktail Search</h1>
             <form class="whatToSearch">
@@ -46,30 +46,30 @@
                         <li><label for="check-random">Random Cocktail</label>
                             <input type="radio" name="check-term" value="opt5" id="check-random"></li>
                     </ul>
-                    <button type="submit" id="random-submit" hidden="true">Randomize</button>
+                    <button type="submit" id="random-submit" class="hidden">Randomize</button>
                 </fieldset>
             </form>
         </div>
         <p id="js-error-message" class="error-message"></p>
-        <div hidden="true" id="terms-boxes">
+        <div class="hidden" id="terms-boxes">
             <form>
                 <fieldset>
                     <legend>
                         <h3>Type your search term</h3>
                     </legend>
-                    <p hidden="true" id="ingredientInput">
+                    <p class="hidden" id="ingredientInput">
                         <label for="search-ingredient">Type an ingredient</label>
                         <input type="text" name="search-ingredient" id="search-ingredient" placeholder="Gin, Vodka, etc (will only accept one)">
                     </p>
-                    <p hidden="true" id="cocktailNameInput">
+                    <p class="hidden" id="cocktailNameInput">
                         <label for="search-cocktail-name">Type a cockatil name</label>
                         <input type="text" name="search-cocktail-name" id="search-cocktail-name" placeholder="Margarita, Mimosa, etc">
                     </p>
-                    <p hidden="true" id="beginingLetterInput">
+                    <p class="hidden" id="beginingLetterInput">
                         <label for="search-begining-letter">Type a cocktail begining letter</label>
                         <input type="text" name="search-begining-letter" id="search-begining-letter" placeholder="A, B, 1, 2, etc">
                     </p>
-                    <p hidden="true" id="idInput">
+                    <p class="hidden" id="idInput">
                         <label for="search-id">Type a cocktail ID</label>
                         <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc (enter numbers only)">
                     </p>
