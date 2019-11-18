@@ -99,28 +99,12 @@ textarea {
    ========================================================================== */
 
 body {
-    color: #8ccbff;
+    color: #000;
     background-color: #000;
     font-family: 'Roboto', 'Lato', 'Montserrat', sans-serif;
+    background: url('../img/cocktails3.jpg')
 }
 
-#background {
-    width: 100%;
-    display: block;
-    position: relative;
-}
-
-#background::after {
-    content: "";
-    background: url("../img/cocktails.jpg");
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
 
 main {
     text-align: center;
