@@ -226,8 +226,15 @@ span {
 
 legend {
     text-align: center;
+    font-size: 2em;
 }
-
+#legendPara {
+    font-size: .75em;
+    font-weight: 400;
+}
+h1 {
+    font-size: 3em;
+}
 
 
 
