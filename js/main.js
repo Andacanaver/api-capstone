@@ -133,8 +133,8 @@
                         <div class="drinkInstructions">
                             <p class="image half-width"><img src="${drink[i].strDrinkThumb}" alt="The Cocktail is  ${drink[i].strDrink}"></p>
                             <div class="drink-mix half-width">
-                                <ul id="measurements-${i}"><h4>Measurements</h4></ul>
-                                <ul id="ingredients-${i}"><h4>Ingredients</h4></ul>
+                                <ul id="measurements-${i}"><b>Measurements</b></ul>
+                                <ul id="ingredients-${i}"><b>Ingredients</b></ul>
                             </div>
                             <p class="instructions"><span>Instructions: </span>${drink[i].strInstructions}</p>
                         </div>
@@ -167,4 +167,4 @@
          getDrinks(search);
      });
  }
- $(watchForm());
+ $(watchForm);
