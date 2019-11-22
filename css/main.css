@@ -103,6 +103,7 @@ body {
     background-color: #000;
     font-family: 'Roboto', 'Lato', 'Montserrat', sans-serif;
     background: url('../img/cocktails2.jpg');
+    background-size: cover;
 }
 
 
