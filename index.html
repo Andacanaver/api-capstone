@@ -3,7 +3,7 @@
  
 <head>
     <meta charset="utf-8">
-    <title>Cockatil Drink Search</title>
+    <title>Drink Search</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,19 +31,18 @@
             <form class="whatToSearch">
                 <fieldset>
                     <legend>
-                        <b>What would you like to search for?<br/>
-                            <span id="legendPara">(select a radio button)</span></b>
+                        <b>What would you like to search for?</b>
                     </legend>
                     <ul id="search-terms">
                         <li><label for="check-ingredient">Ingredient</label>
                             <input type="radio" name="check-term" value="opt1" required id="check-ingredient"> </li>
-                        <li><label for="check-cocktail-name">Cocktail Name</label>
+                        <li><label for="check-cocktail-name">Drink Name</label>
                             <input type="radio" name="check-term" value="opt2" required id="check-cocktail-name"> </li>
-                        <li><label for="check-begining-letter">First letter of cocktail</label>
+                        <li><label for="check-begining-letter">First letter of drink</label>
                             <input type="radio" name="check-term" value="opt3" required id="check-begining-letter"> </li>
-                        <li><label for="check-id">Cocktail ID</label>
+                        <li><label for="check-id">Drink ID</label>
                             <input type="radio" name="check-term" value="opt4" required id="check-id"> </li>
-                        <li><label for="check-random">Random Cocktail</label>
+                        <li><label for="check-random">Random drink</label>
                             <input type="radio" name="check-term" value="opt5" id="check-random"></li>
                     </ul>
                     <button type="submit" id="random-submit" class="hidden">Randomize</button>
@@ -52,7 +51,7 @@
         </div>
         <p id="js-error-message" class="error-message"></p>
         <div class="hidden" id="terms-boxes">
-            <form>
+            <form aria-live="polite">
                 <fieldset>
                     <legend>
                         <b>Type your search term</b>
@@ -62,22 +61,22 @@
                         <input type="text" name="search-ingredient" id="search-ingredient" placeholder="Gin, Vodka, etc (will only accept one)">
                     </p>
                     <p class="hidden" id="cocktailNameInput">
-                        <label for="search-cocktail-name">Type a cockatil name</label>
+                        <label for="search-cocktail-name">Type a drink name</label>
                         <input type="text" name="search-cocktail-name" id="search-cocktail-name" placeholder="Margarita, Mimosa, etc">
                     </p>
                     <p class="hidden" id="beginingLetterInput">
-                        <label for="search-begining-letter">Type a cocktail begining letter</label>
+                        <label for="search-begining-letter">Type a drink begining letter</label>
                         <input type="text" name="search-begining-letter" id="search-begining-letter" placeholder="A, B, 1, 2, etc">
                     </p>
                     <p class="hidden" id="idInput">
-                        <label for="search-id">Type a cocktail ID</label>
+                        <label for="search-id">Type a drink ID</label>
                         <input type="text" name="search-id" id="search-id" placeholder="255, 5050, etc (enter numbers only)">
                     </p>
                     <button type="submit" id="submit">Submit</button>
                 </fieldset>
             </form>
         </div>
-        <div class="hidden" id="results">
+        <div class="hidden" id="results" aria-live="polite">
             <h3>Search Results</h3>
             <ul id="results-list">
 
